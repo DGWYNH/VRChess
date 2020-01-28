@@ -11,7 +11,6 @@ namespace ChessTest
     {
         static void Main()
         {
-            // comment to change file
             Game game = new Game();
             game.Init();
             Game.board.Print();
