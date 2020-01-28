@@ -5,18 +5,9 @@ using ChessEngine.Game;
 
 namespace ChessEngine.Pieces
 {
-    public class Piece
+    public class Piece : IPiece
     {
-        public enum PieceType
-        {
-            NULL,
-            Pawn,
-            Knight,
-            Bishop,
-            Rook,
-            Queen,
-            King,
-        }
+
 
         protected PieceType m_type;
         protected int m_score;
@@ -29,6 +20,9 @@ namespace ChessEngine.Pieces
 
         public virtual void Print()
         {
+            if (m_type == PieceType.NULL){
+                return;
+            }
             Console.Write("Type: {0}\n", Enum.GetName(typeof(PieceType), (int)m_type));
             Console.Write("Score: {0}\n", m_score);
             Console.Write("Position: {0}\n", m_pos.AsText());
@@ -48,6 +42,9 @@ namespace ChessEngine.Pieces
             return m_score;
         }
 
+        public Player Owner(){
+            return m_owner;
+        }
 
         public virtual bool Move(Position toPos)
         {

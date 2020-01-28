@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using ChessEngine.Misc;
 using ChessEngine.Pieces;
 
@@ -15,5 +16,6 @@ namespace ChessEngine.Game
         bool IsOccupied(Position pos);
         Piece At(Position pos);
         bool IsEmpty(Position pos);
+        List<Piece> CurrentPlayerPieces(Player player);
     }
 }

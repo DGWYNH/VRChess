@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ChessEngine;
 using ChessEngine.Pieces;
 using ChessEngine.Misc;
@@ -116,8 +117,6 @@ namespace ChessEngine.Game
             return newBoard;
         }
 
-
-
         public bool Move(Position fromPos, Position toPos)
         {
             if (!IsOccupied(fromPos))
@@ -151,7 +150,7 @@ namespace ChessEngine.Game
         {
             if (m_board[pos.Y(), pos.X()] == null)
             {
-                System.Console.Write("Warning: Null piece returned at: {0}\n", pos.AsText());
+                // System.Console.Write("Warning: Null piece returned at: {0}\n", pos.AsText());
                 return new Piece();
             }
             return m_board[pos.Y(), pos.X()];
@@ -165,5 +164,23 @@ namespace ChessEngine.Game
             }
             return false;
         }
+
+        public List<Piece> CurrentPlayerPieces(Player player){
+            List<Piece> playerPieces = new List<Piece>();
+            for (int n = 0; n < 8; n++)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    Position currentPos = new Position(n, i);
+                    Piece currentPiece = Game.board.At(currentPos);
+                    if (currentPiece.Owner() == player)
+                    {
+                        playerPieces.Add(currentPiece);
+                    }
+                }
+            }
+            return playerPieces;
+        }
+
     }
 }

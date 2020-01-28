@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using ChessEngine.Pieces;
-
+public enum Player
+{
+    NULL,
+    Player1,
+    Player2,
+}
 namespace ChessEngine.Game
 {
-    public enum Player
-    {
-        NULL,
-        Player1,
-        Player2,
-    }
+
     class Game
     {
         public static Board board;
