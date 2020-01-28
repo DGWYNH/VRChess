@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using ChessUtils.Pieces;
-using ChessUtils.Misc;
-using ChessUtils.Game;
+using ChessEngine.Pieces;
+using ChessEngine.Misc;
+using ChessEngine.Game;
 
 namespace ChessTest
 {

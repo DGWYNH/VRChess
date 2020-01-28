@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessUtils.Game;
+using ChessEngine.Game;
 
-namespace ChessUtils.Misc
+namespace ChessEngine.Misc
 {
     public enum Direction
     {
@@ -16,7 +16,7 @@ namespace ChessUtils.Misc
         DownLeft,
         DownRight,
     }
-    class Position
+    public class Position
     {
         readonly int m_x;
         readonly int m_y;

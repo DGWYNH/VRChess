@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessUtils.Pieces;
+using ChessEngine.Pieces;
 
-namespace ChessUtils.Game
+namespace ChessEngine.Game
 {
     public enum Player
     {

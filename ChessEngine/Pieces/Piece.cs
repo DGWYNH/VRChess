@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessUtils.Misc;
-using ChessUtils.Game;
+using ChessEngine.Misc;
+using ChessEngine.Game;
 
-namespace ChessUtils.Pieces
+namespace ChessEngine.Pieces
 {
-    class Piece
+    public class Piece
     {
         public enum PieceType
         {

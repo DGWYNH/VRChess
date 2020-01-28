@@ -1,7 +1,8 @@
 ﻿using System;
-using ChessUtils.Pieces;
-using ChessUtils.Misc;
-using ChessUtils.Game;
+using ChessEngine;
+using ChessEngine.Pieces;
+using ChessEngine.Misc;
+using ChessEngine.Game;
 
 /*
         [8, 8]
@@ -12,9 +13,10 @@ using ChessUtils.Game;
 [a1 ...   ]
 [0, 0]
 */
-namespace ChessUtils.Game
+namespace ChessEngine.Game
 {
-    class Board
+    
+    public class Board : IBoard
     {
         private readonly Piece[,] m_board;
 
@@ -97,6 +99,21 @@ namespace ChessUtils.Game
                 System.Console.Write("\n");
             }
             System.Console.Write("\n");
+        }
+
+        public Board Copy()
+        {
+            Board newBoard = new Board();
+
+            for (int n = 0; n < 8; n++)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    newBoard.m_board[n, i] = m_board[n, i];
+                }
+            }
+
+            return newBoard;
         }
 
 
