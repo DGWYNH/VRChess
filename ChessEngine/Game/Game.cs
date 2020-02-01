@@ -10,7 +10,7 @@ public enum Player
 namespace ChessEngine.Game
 {
 
-    class Game
+    class Game : IGame
     {
         public static Board board;
         public static Player currentPlayer;

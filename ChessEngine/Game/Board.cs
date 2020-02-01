@@ -138,6 +138,10 @@ namespace ChessEngine.Game
             }
         }
 
+        public bool Move(Move move) {
+            return Move(move.From(), move.To());
+        }
+
         public bool IsOccupied(Position pos)
         {
             if(m_board[pos.Y(), pos.X()] == null)
@@ -165,13 +169,13 @@ namespace ChessEngine.Game
             return false;
         }
 
-        public List<Piece> CurrentPlayerPieces(Player player){
+        public List<Piece> PlayerPieces(Player player){
             List<Piece> playerPieces = new List<Piece>();
             for (int n = 0; n < 8; n++)
             {
                 for (int i = 0; i < 8; i++)
                 {
-                    Position currentPos = new Position(n, i);
+                    Position currentPos = new Position(i, n);
                     Piece currentPiece = Game.board.At(currentPos);
                     if (currentPiece.Owner() == player)
                     {
@@ -182,5 +186,34 @@ namespace ChessEngine.Game
             return playerPieces;
         }
 
+        public double PlayerScore(Player player) {
+            List<Piece> playerPieces = PlayerPieces(player);
+            double scoreSum = 0.0;
+            foreach(var piece in playerPieces) {
+                scoreSum += piece.Score();
+            }
+            return scoreSum;
+        }
+
+        public List<Move> PlayerMoves(Player player) {
+            List<Move> playerMoves = new List<Move>();
+
+            for (int n = 0; n < 8; n++)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    Position currentPos = new Position(i, n);
+                    Piece currentPiece = Game.board.At(currentPos);
+                    if (currentPiece.Owner() == player)
+                    {
+                        List<Position> currentPieceMoves = currentPiece.GetValidMoves();
+                        foreach(var move in currentPieceMoves) {
+                            playerMoves.Add(new Move(currentPos, move));
+                        }
+                    }
+                }
+            }
+            return playerMoves;
+        }
     }
 }

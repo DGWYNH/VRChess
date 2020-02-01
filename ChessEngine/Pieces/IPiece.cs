@@ -18,6 +18,7 @@ namespace ChessEngine.Pieces
 
         void Print();
         PieceType Type();
+        Position Position();
         int Score();
         Player Owner();
         bool Move(Position toPos);

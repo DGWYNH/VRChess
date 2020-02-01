@@ -84,12 +84,16 @@ namespace ChessEngine.Misc
 
         public void Print()
         {
-            Console.Write("X: {0}, Y: {1}\n", m_x, m_y);
+            string textPos = ((char)('A' + m_x)).ToString() + (m_y + 1);
+            string textCoord = "(" + m_x + "," + m_y + ")";
+            Console.Write("{0}}\n", textPos + textCoord);
         }
 
         public string AsText()
         {
-            return "(" + m_x + "," + m_y + ")";
+            string textPos = ((char)('A' + m_x)).ToString() + (m_y + 1);
+            string textCoord = "(" + m_x + "," + m_y + ")";
+            return textPos + textCoord;
         }
 
         public static Position operator + (Position pos1, Position pos2)
