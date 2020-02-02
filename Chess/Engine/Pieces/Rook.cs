@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessEngine.Misc;
-using ChessEngine.Game;
+using ChessGame.Engine.Misc;
+using ChessGame.Engine.Game;
 
-namespace ChessEngine.Pieces
+namespace ChessGame.Engine.Pieces
 {
     class Rook : Piece
     {
@@ -62,6 +62,9 @@ namespace ChessEngine.Pieces
             return validMoves;
         }
 
+        public override Piece Copy()
+        {
+            return new Bishop(m_pos, m_owner);
+        }
     }
-
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessEngine;
-using ChessEngine.Pieces;
-using ChessEngine.Misc;
-using ChessEngine.Game;
+using ChessGame.Engine;
+using ChessGame.Engine.Pieces;
+using ChessGame.Engine.Misc;
+using ChessGame.Engine.Game;
 
 /*
         [8, 8]
@@ -14,7 +14,7 @@ using ChessEngine.Game;
 [a1 ...   ]
 [0, 0]
 */
-namespace ChessEngine.Game
+namespace ChessGame.Engine.Game
 {
     
     public class Board : IBoard
@@ -110,7 +110,10 @@ namespace ChessEngine.Game
             {
                 for (int i = 0; i < 8; i++)
                 {
-                    newBoard.m_board[n, i] = m_board[n, i];
+                    if(m_board[n, i] != null) {
+
+                        newBoard.m_board[n, i] = m_board[n, i].Copy();
+                    }
                 }
             }
 

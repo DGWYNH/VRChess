@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using ChessEngine.Misc;
-using ChessEngine.Pieces;
+using ChessGame.Engine.Misc;
+using ChessGame.Engine.Pieces;
 
-namespace ChessEngine.Game
+namespace ChessGame.Engine.Game
 {
 
     public interface IBoard

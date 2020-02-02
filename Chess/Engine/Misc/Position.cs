@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessEngine.Game;
+using ChessGame.Engine.Game;
 
-namespace ChessEngine.Misc
+namespace ChessGame.Engine.Misc
 {
     public enum Direction
     {
@@ -86,7 +86,7 @@ namespace ChessEngine.Misc
         {
             string textPos = ((char)('A' + m_x)).ToString() + (m_y + 1);
             string textCoord = "(" + m_x + "," + m_y + ")";
-            Console.Write("{0}}\n", textPos + textCoord);
+            Console.Write("{0}\n", textPos + textCoord);
         }
 
         public string AsText()

@@ -1,4 +1,4 @@
-namespace ChessEngine.Game
+namespace ChessGame.Engine.Game
 {
     public interface IGame
     {

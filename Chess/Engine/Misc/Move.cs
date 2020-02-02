@@ -1,12 +1,16 @@
-using ChessEngine.Misc;
+using ChessGame.Engine.Misc;
 
-namespace ChessEngine.Misc
+namespace ChessGame.Engine.Misc
 {
     public class Move : IMove
     {
         private readonly Position m_fromPos;
         private readonly Position m_toPos;
-        
+
+        public Move() {
+            m_fromPos = new Position();
+            m_toPos = new Position();
+        }
         public Move(Position fromPos, Position toPos) {
             m_fromPos = fromPos;
             m_toPos = toPos;
@@ -22,6 +26,9 @@ namespace ChessEngine.Misc
 
         public void Print() {
             System.Console.Write("From: {0}, To: {1}\n", m_fromPos.AsText(), m_toPos.AsText());
+        }
+        public string AsText(){
+            return "From: " +  m_fromPos.AsText() + "To: " + m_toPos.AsText();
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessEngine.Misc;
-using ChessEngine.Game;
+using ChessGame.Engine.Misc;
+using ChessGame.Engine.Game;
 
-namespace ChessEngine.Pieces
+namespace ChessGame.Engine.Pieces
 {
     class Bishop : Piece
     {
@@ -60,6 +60,10 @@ namespace ChessEngine.Pieces
             validMoves.AddRange(m_pos.CheckDirAvailability(Direction.DownLeft));
             validMoves.AddRange(m_pos.CheckDirAvailability(Direction.DownRight));
             return validMoves;
+        }
+
+        public override Piece Copy() {
+            return new Bishop(m_pos, m_owner);
         }
 
     }

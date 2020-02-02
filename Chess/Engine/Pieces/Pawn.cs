@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessEngine.Misc;
-using ChessEngine.Game;
+using ChessGame.Engine.Misc;
+using ChessGame.Engine.Game;
 
-namespace ChessEngine.Pieces
+namespace ChessGame.Engine.Pieces
 {
     class Pawn: Piece
     {
@@ -144,8 +144,12 @@ namespace ChessEngine.Pieces
             {
                 validMoves.Add(m_pos + new Position(0, 2));
             }
-
             return validMoves;
+        }
+
+        public override Piece Copy()
+        {
+            return new Pawn(m_pos, m_owner, m_direction);
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessEngine.Misc;
-using ChessEngine.Game;
+using ChessGame.Engine.Misc;
+using ChessGame.Engine.Game;
 
-namespace ChessEngine.Pieces
+namespace ChessGame.Engine.Pieces
 {
     class Queen : Piece
     {
@@ -68,6 +68,10 @@ namespace ChessEngine.Pieces
             return validMoves;
         }
 
+        public override Piece Copy()
+        {
+            return new Queen(m_pos, m_owner);
+        }
     }
 }
 

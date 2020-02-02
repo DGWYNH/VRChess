@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessEngine.Misc;
-using ChessEngine.Game;
+using ChessGame.Engine.Misc;
+using ChessGame.Engine.Game;
 
-namespace ChessEngine.Pieces
+namespace ChessGame.Engine.Pieces
 {
     public class Piece : IPiece
     {
@@ -59,6 +59,10 @@ namespace ChessEngine.Pieces
         public virtual List<Position> GetValidMoves()
         {
             return new List<Position>();
+        }
+
+        public virtual Piece Copy() {
+            return new Piece();
         }
 
         public bool IsOpponent()

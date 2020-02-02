@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ChessEngine.Misc
+namespace ChessGame.Engine.Misc
 {
     public interface IPosition
     {

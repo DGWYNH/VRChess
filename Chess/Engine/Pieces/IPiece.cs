@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using ChessEngine.Misc;
-namespace ChessEngine.Pieces
+using ChessGame.Engine.Misc;
+namespace ChessGame.Engine.Pieces
 {
     public enum PieceType
     {
@@ -25,5 +25,6 @@ namespace ChessEngine.Pieces
         bool IsValidMove(Position toPos);
         List<Position> GetValidMoves();
         bool IsOpponent();
+        Piece Copy();
     }
 }
