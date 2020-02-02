@@ -136,7 +136,7 @@ namespace ChessGame.Engine.Game
             }
             else
             {
-                System.Console.Write("Error: Invalid Move\n");
+                // System.Console.Write("Error: Invalid Move\n");
                 return false;
             }
         }

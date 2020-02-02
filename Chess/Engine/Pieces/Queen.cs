@@ -27,7 +27,7 @@ namespace ChessGame.Engine.Pieces
         {
             if (!toPos.IsBounded())
             {
-                System.Console.Write("Error: Selection out of bounds!\n");
+                // System.Console.Write("Error: Selection out of bounds!\n");
                 return false;
             }
             if (Game.Game.board.IsEmpty(toPos))

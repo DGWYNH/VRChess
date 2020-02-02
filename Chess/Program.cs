@@ -17,16 +17,16 @@ namespace ChessGame
             Game.board.Print();
 
             Console.Write("------------------------\n");
-            for(int n = 0; n < 10; n++) {
+            for(int n = 0; n < 1000000; n++) {
                 Ai testAI = new Ai();
                 testAI.GetTopMoves();
                 Move testMove = testAI.ChooseMove();
-                Move newMove = new Move(new Position("B1"), new Position("C3"));
-                testMove.Print();
-                Game.board.Move(newMove);
+                // Move newMove = new Move(new Position("B1"), new Position("C3"));
+                // testMove.Print();
+                Game.board.Move(testMove);
                 game.PlayerSwap();
-                Game.board.Print();
             }
+            Game.board.Print();
 
             // List<Move> testList = Game.board.PlayerMoves(Game.currentPlayer);
             // foreach(var each in testList) {
