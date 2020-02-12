@@ -18,7 +18,7 @@ namespace ChessGame.AI
             List<Move> possibleMoves = Game.board.PlayerMoves(Game.currentPlayer);
             foreach(var currentMove in possibleMoves) {
                 Board tempBoard = Game.board.Copy();
-                tempBoard.Move(currentMove);
+                tempBoard.Move(currentMove, true);
                 // tempBoard.Print();
                 double playerScore = tempBoard.PlayerScore(Game.currentPlayer);
                 double otherPlayerScore = tempBoard.PlayerScore(Game.otherPlayer);

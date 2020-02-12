@@ -23,7 +23,7 @@ namespace ChessGame.Engine.Pieces
             m_owner = player;
         }
 
-        public override bool Move(Position toPos)
+        public override bool Move(Position toPos, bool tempMove)
         {
             if (!toPos.IsBounded())
             {
@@ -45,6 +45,10 @@ namespace ChessGame.Engine.Pieces
                     && m_pos.IsOpenPath(toPos))
                 {
                     Game.Game.capturedPieces.Add(Game.Game.board.At(toPos));
+                    if (!tempMove)
+                    {
+                        Game.Game.board.At(toPos).Captured();
+                    }
                     m_pos = toPos;
                     return true;
                 }
@@ -65,6 +69,11 @@ namespace ChessGame.Engine.Pieces
         public override Piece Copy()
         {
             return new Bishop(m_pos, m_owner);
+        }
+
+        public override void Captured()
+        {
+            m_pos = new Position();
         }
     }
 }

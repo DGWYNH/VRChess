@@ -80,9 +80,7 @@ namespace ChessGame.Engine.Game
         {
             System.Console.Write("1: Pawn   2: Knight  3: Bishop\n");
             System.Console.Write("4: Rook   5: Queen   6: King\n");
-            System.Console.Write("\n");
             System.Console.Write("   A  B  C  D  E  F  G  H\n");
-            System.Console.Write("\n");
             for (int n = 7; n >= 0; n--)
             {
                 System.Console.Write("{0} ", n + 1);
@@ -120,18 +118,25 @@ namespace ChessGame.Engine.Game
             return newBoard;
         }
 
-        public bool Move(Position fromPos, Position toPos)
+        public bool Move(Position fromPos, Position toPos, bool tempMove = false)
         {
+            if(At(fromPos).Owner() != Game.currentPlayer) {
+                System.Console.Write("Error: Cannot select opposing piece!\n");
+                return false;
+            }
             if (!IsOccupied(fromPos))
             {
                 System.Console.Write("Error: No piece selected!\n");
                 return false;
             }
-            if (At(fromPos).Move(toPos))
+            if (At(fromPos).IsValidMove(toPos))
             {
-                Piece tempPiece = m_board[fromPos.Y(), fromPos.X()];
-                m_board[fromPos.Y(), fromPos.X()] = m_board[toPos.Y(), toPos.X()];
-                m_board[toPos.Y(), toPos.X()] = tempPiece;
+                At(fromPos).Move(toPos, tempMove);
+                // Piece tempPiece = m_board[fromPos.Y(), fromPos.X()];
+                // m_board[fromPos.Y(), fromPos.X()] = m_board[toPos.Y(), toPos.X()];
+                // m_board[toPos.Y(), toPos.X()] = tempPiece;
+                m_board[toPos.Y(), toPos.X()] = m_board[fromPos.Y(), fromPos.X()];
+                m_board[fromPos.Y(), fromPos.X()] = null;
                 return true;
             }
             else
@@ -141,8 +146,8 @@ namespace ChessGame.Engine.Game
             }
         }
 
-        public bool Move(Move move) {
-            return Move(move.From(), move.To());
+        public bool Move(Move move, bool tempMove = false) {
+            return Move(move.From(), move.To(), tempMove);
         }
 
         public bool IsOccupied(Position pos)

@@ -9,7 +9,7 @@ namespace ChessGame.Engine.Pieces
     {
         public Queen()
         {
-            m_score = 1;
+            m_score = 9;
             m_type = PieceType.Queen;
             m_pos = new Position();
             m_owner = Player.NULL;
@@ -17,13 +17,13 @@ namespace ChessGame.Engine.Pieces
 
         public Queen(Position pos, Player player)
         {
-            m_score = 1;
+            m_score = 9;
             m_type = PieceType.Queen;
             m_pos = pos;
             m_owner = player;
         }
 
-        public override bool Move(Position toPos)
+        public override bool Move(Position toPos, bool tempMove)
         {
             if (!toPos.IsBounded())
             {
@@ -47,6 +47,10 @@ namespace ChessGame.Engine.Pieces
                     && m_pos.IsOpenPath(toPos))
                 {
                     Game.Game.capturedPieces.Add(Game.Game.board.At(toPos));
+                    if (!tempMove)
+                    {
+                        Game.Game.board.At(toPos).Captured();
+                    }
                     m_pos = toPos;
                     return true;
                 }
@@ -71,6 +75,11 @@ namespace ChessGame.Engine.Pieces
         public override Piece Copy()
         {
             return new Queen(m_pos, m_owner);
+        }
+
+        public override void Captured()
+        {
+            m_pos = new Position();
         }
     }
 }

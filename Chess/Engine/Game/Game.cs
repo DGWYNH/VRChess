@@ -9,13 +9,21 @@ public enum Player
 }
 namespace ChessGame.Engine.Game
 {
+    public struct GameFlags {
+        public bool running;
+        public Player winner;
+        public bool player1InCheck;
+        public bool player2InCheck;
 
+    }
     class Game : IGame
     {
         public static Board board;
         public static Player currentPlayer;
         public static Player otherPlayer;
         public static List<Piece> capturedPieces;
+
+        public static GameFlags gameflags;
 
         public void Init()
         {
@@ -24,6 +32,10 @@ namespace ChessGame.Engine.Game
             currentPlayer = Player.Player1;
             otherPlayer = Player.Player2;
             capturedPieces = new List<Piece>();
+
+            gameflags.running = true;
+            gameflags.winner = Player.NULL;
+
         }
 
 

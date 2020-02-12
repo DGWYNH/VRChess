@@ -7,8 +7,8 @@ namespace ChessGame.Engine.Pieces
 {
     class Pawn: Piece
     {
-        readonly Direction m_direction;
-        bool m_moved;
+        private Direction m_direction;
+        private bool m_moved;
         public Pawn()
         {
             m_score = 1;
@@ -36,7 +36,7 @@ namespace ChessGame.Engine.Pieces
             Console.Write("Has Moved: {0}\n", m_moved);
         }
 
-        public override bool Move(Position toPos)
+        public override bool Move(Position toPos, bool tempMove)
         {
             if (!toPos.IsBounded())
             {
@@ -72,6 +72,10 @@ namespace ChessGame.Engine.Pieces
                     && m_pos.IsAdjacent(toPos))
                 {
                     Game.Game.capturedPieces.Add(Game.Game.board.At(toPos));
+                    if (!tempMove)
+                    {
+                        Game.Game.board.At(toPos).Captured();
+                    }
                     m_pos = toPos;
                     return true;
                 }
@@ -151,5 +155,14 @@ namespace ChessGame.Engine.Pieces
         {
             return new Pawn(m_pos, m_owner, m_direction);
         }
+
+        public override void Captured()
+        {
+            m_pos = new Position();
+            m_direction = Direction.NULL;
+            m_moved = false;
+        }
+
+        // TODO: private bool CanPromote
     }
 }

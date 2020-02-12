@@ -21,10 +21,11 @@ namespace ChessGame.Engine.Pieces
         Position Position();
         int Score();
         Player Owner();
-        bool Move(Position toPos);
+        bool Move(Position toPos, bool tempMove);
         bool IsValidMove(Position toPos);
         List<Position> GetValidMoves();
         bool IsOpponent();
         Piece Copy();
+        void Captured();
     }
-}
+}   

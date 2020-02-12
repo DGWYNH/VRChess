@@ -8,7 +8,7 @@ namespace ChessGame.Engine.Pieces
     {
         public King()
         {
-            m_score = 0;
+            m_score = 1000;
             m_type = PieceType.King;
             m_pos = new Position();
             m_owner = Player.NULL;
@@ -16,13 +16,13 @@ namespace ChessGame.Engine.Pieces
 
         public King(Position pos, Player player)
         {
-            m_score = 0;
+            m_score = 1000;
             m_type = PieceType.King;
             m_pos = pos;
             m_owner = player;
         }
 
-        public override bool Move(Position toPos)
+        public override bool Move(Position toPos, bool tempMove)
         {
             if (!toPos.IsBounded())
             {
@@ -42,6 +42,10 @@ namespace ChessGame.Engine.Pieces
                 if (m_pos.IsAdjacent(toPos))
                 {
                     Game.Game.capturedPieces.Add(Game.Game.board.At(toPos));
+                    if (!tempMove)
+                    {
+                        Game.Game.board.At(toPos).Captured();
+                    }
                     m_pos = toPos;
                     return true;
                 }
@@ -52,6 +56,21 @@ namespace ChessGame.Engine.Pieces
         public override Piece Copy()
         {
             return new King(m_pos, m_owner);
+        }
+
+        // TODO: Check for check/Checkmate
+        public override void Captured() {
+            m_pos = new Position();
+            Game.Game.gameflags.running = false;
+            if(m_owner == Player.Player1) {
+                Game.Game.gameflags.winner = Player.Player2;
+            }
+            else if(m_owner == Player.Player2) {
+                Game.Game.gameflags.winner = Player.Player1;
+            }
+            else {
+                Game.Game.gameflags.winner = Player.NULL;
+            }
         }
     }
 }

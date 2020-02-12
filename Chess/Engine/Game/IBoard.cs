@@ -12,8 +12,8 @@ namespace ChessGame.Engine.Game
         void Print();
         void Init();
         Board Copy();
-        bool Move(Position fromPos, Position toPos);
-        bool Move(Move move);
+        bool Move(Position fromPos, Position toPos, bool tempMove);
+        bool Move(Move move, bool tempMove);
         bool IsOccupied(Position pos);
         Piece At(Position pos);
         bool IsEmpty(Position pos);

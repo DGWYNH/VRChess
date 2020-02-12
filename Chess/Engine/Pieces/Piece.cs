@@ -46,7 +46,7 @@ namespace ChessGame.Engine.Pieces
             return m_owner;
         }
 
-        public virtual bool Move(Position toPos)
+        public virtual bool Move(Position toPos, bool tempMove = false)
         {
             return false;
         }
@@ -72,6 +72,10 @@ namespace ChessGame.Engine.Pieces
                 return true;
             }
             return false;
+        }
+
+        public virtual void Captured() {
+            m_pos = new Position();
         }
     }
 }
