@@ -52,5 +52,21 @@ namespace ChessGame.Engine.Game
                 otherPlayer = Player.Player2;
             }
         }
+
+        public void TogglePlayerCheck(Player player)
+        {
+
+            Game.gameflags.player1InCheck = false;
+            Game.gameflags.player2InCheck = false;
+            switch (player)
+            {
+                case Player.Player1:
+                    Game.gameflags.player1InCheck = true;
+                    break;
+                case Player.Player2:
+                    Game.gameflags.player2InCheck = true;
+                    break;
+            }
+        }
     }
 }

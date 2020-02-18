@@ -223,5 +223,53 @@ namespace ChessGame.Engine.Game
             }
             return playerMoves;
         }
+
+        private List<Piece> GetKings() {
+            List<Piece> kingList = new List<Piece>();
+
+            for (int n = 0; n < 8; n++)
+            {
+                for (int i = 0; i < 8; i++) {
+                    Piece tempPiece = Game.board.At(new Position(i, n));
+                    if(tempPiece.Type() == PieceType.King) {
+                        kingList.Add(tempPiece);
+                    }   
+                }
+            }
+            return kingList;
+        }
+
+
+        public bool Check() {
+            List<Piece> kingList = GetKings();
+            foreach(var king in kingList) {
+                Position kingPos = king.Position();
+                // QueenCheck
+                foreach (var dir in Enum.GetValues(typeof(Direction))) {
+                    if((Direction)dir != Direction.NULL) {
+                        if(kingPos.CheckDirPiece((Direction)dir).Type() == PieceType.Queen) {
+                            TogglePlayerCheck(king.Owner());
+                            return true;
+                        }
+                    }
+                }
+
+                // RookCheck
+
+                // BishopCheck
+
+                // KnightCkeck
+
+                // PawnCheck
+
+            }
+            return false;
+        }
+
+        public bool CheckMate() {
+            List<Piece> kingList = GetKings();
+            // TODO: Check if checkmate check is necessary
+            return false;
+        }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ChessGame.Engine.Pieces;
 
 namespace ChessGame.Engine.Misc
 {
@@ -18,6 +19,7 @@ namespace ChessGame.Engine.Misc
         bool Equals(Position other);
         Position NextInDir(Direction dir);
         List<Position> CheckDirAvailability(Direction dir, bool includeOpponents = true);
+        public Piece CheckDirPiece(Direction dir);
 
     }
 }

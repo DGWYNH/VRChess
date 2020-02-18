@@ -20,5 +20,7 @@ namespace ChessGame.Engine.Game
         List<Piece> PlayerPieces(Player player);
         double PlayerScore(Player player);
         List<Move> PlayerMoves(Player player);
+        bool Check();
+        bool CheckMate();
     }
 }

@@ -4,5 +4,6 @@ namespace ChessGame.Engine.Game
     {
         void Init();
         void PlayerSwap();
+        void TogglePlayerCheck(Player player);
     }
 }

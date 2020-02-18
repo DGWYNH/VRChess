@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ChessGame.Engine.Game;
+using ChessGame.Engine.Pieces;
 
 namespace ChessGame.Engine.Misc
 {
@@ -282,6 +282,15 @@ namespace ChessGame.Engine.Misc
                     return retList;
                 }
             }
+        }
+        public Piece CheckDirPiece(Direction dir) {
+            Position currentPos = new Position(m_x, m_y);
+            while (currentPos.IsBounded()) {
+                if(!Game.Game.board.IsEmpty(currentPos)) {
+                    return Game.Game.board.At(currentPos);
+                }
+            }
+            return new Piece();
         }
     }
 }
