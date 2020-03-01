@@ -248,7 +248,7 @@ namespace ChessGame.Engine.Game
                 foreach (var dir in Enum.GetValues(typeof(Direction))) {
                     if((Direction)dir != Direction.NULL) {
                         if(kingPos.CheckDirPiece((Direction)dir).Type() == PieceType.Queen) {
-                            TogglePlayerCheck(king.Owner());
+                            //TogglePlayerCheck(king.Owner());
                             return true;
                         }
                     }

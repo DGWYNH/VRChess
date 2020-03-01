@@ -19,7 +19,7 @@ namespace ChessGame.Engine.Misc
         bool Equals(Position other);
         Position NextInDir(Direction dir);
         List<Position> CheckDirAvailability(Direction dir, bool includeOpponents = true);
-        public Piece CheckDirPiece(Direction dir);
+        Piece CheckDirPiece(Direction dir);
 
     }
 }
