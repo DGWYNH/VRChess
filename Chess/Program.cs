@@ -20,6 +20,14 @@ namespace ChessGame
             // for(int n = 0; n < 1000000; n++) {
             double n = 0;
             while(Game.gameflags.running == true) {
+                switch(Game.currentPlayer) {
+                    case Player.Player1: 
+                        System.Console.Write("Turn: Player 1:\n");
+                        break;
+                    case Player.Player2: 
+                        System.Console.Write("Turn: Player 2:\n");
+                        break;
+                }
                 n++;
                 Ai testAI = new Ai();
                 testAI.GetTopMoves();
