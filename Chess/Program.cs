@@ -40,6 +40,7 @@ namespace ChessGame
                 }
                 Game.board.Print();
             }
+            System.Console.Write("Game Over:\n");
             Game.board.Print();
 
             switch(Game.gameflags.winner) {
