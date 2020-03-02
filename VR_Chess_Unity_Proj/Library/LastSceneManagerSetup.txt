@@ -2,3 +2,6 @@ sceneSetups:
 - path: Assets/Scenes/The_Scene.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/VRTK/LegacyExampleFiles/041_Controller_ObjectSnappingToDropZones.unity
+  isLoaded: 0
+  isActive: 0
