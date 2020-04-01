@@ -1,4 +1,6 @@
-﻿using System;
+﻿using UnityEngine;
+using UnityEditor;
+using System;
 using ChessGame.Engine.Misc;
 using ChessGame.Engine.Game;
 

@@ -1,3 +1,5 @@
+using UnityEngine;
+using UnityEditor;
 using ChessGame.Engine.Misc;
 
 namespace ChessGame.AI

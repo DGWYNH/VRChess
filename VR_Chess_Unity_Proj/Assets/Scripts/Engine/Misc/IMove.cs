@@ -1,3 +1,5 @@
+using UnityEngine;
+using UnityEditor;
 namespace ChessGame.Engine.Misc
 {
     public interface IMove

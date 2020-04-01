@@ -1,4 +1,6 @@
-﻿using System;
+﻿using UnityEngine;
+using UnityEditor;
+using System;
 using System.Collections.Generic;
 
 using ChessGame.Engine.Game;
@@ -8,7 +10,7 @@ using ChessGame.AI;
 
 namespace ChessGame
 {
-    class Program
+    class Program : MonoBehaviour
     {
         static void Main()
         {

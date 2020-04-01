@@ -1,4 +1,6 @@
-﻿using System;
+﻿using UnityEngine;
+using UnityEditor;
+using System;
 using System.Collections.Generic;
 using ChessGame.Engine.Pieces;
 
@@ -16,7 +18,7 @@ namespace ChessGame.Engine.Misc
         DownLeft,
         DownRight,
     }
-    public class Position
+    public class Position : MonoBehaviour
     {
         readonly int m_x;
         readonly int m_y;

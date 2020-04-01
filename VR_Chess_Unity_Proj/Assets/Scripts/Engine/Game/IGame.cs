@@ -1,3 +1,5 @@
+using UnityEngine;
+using UnityEditor;
 namespace ChessGame.Engine.Game
 {
     public interface IGame

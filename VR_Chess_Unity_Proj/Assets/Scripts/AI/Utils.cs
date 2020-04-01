@@ -1,10 +1,12 @@
+using UnityEngine;
+using UnityEditor;
 using System.Collections.Generic;
 using ChessGame.Engine.Misc;
 using ChessGame.Engine.Game;
 
 namespace ChessGame.AI
 {
-    class Ai {
+    class Ai : MonoBehaviour {
         
         private List<Decision> m_topDecisions;
         private readonly int m_numDecisions = 5;
