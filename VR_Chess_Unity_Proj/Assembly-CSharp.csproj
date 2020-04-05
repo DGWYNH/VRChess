@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Engine\Pieces\Piece.cs" />
     <Compile Include="Assets\Scripts\Engine\Pieces\Queen.cs" />
     <Compile Include="Assets\Scripts\Engine\Pieces\Rook.cs" />
+    <Compile Include="Assets\Scripts\MenuToggle.cs" />
     <Compile Include="Assets\Scripts\Program.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
