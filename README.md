@@ -1,6 +1,8 @@
 # VRChess
 VR Chess repository for Senior Design Project
 
+Poster link: https://drive.google.com/file/d/1qFeF4p9EJ7H_Z8jTa_xYkfZHYplLyd-b/view?usp=sharing 
+
 Team members:
 - Michael Rock
 - Brandon Weeks
