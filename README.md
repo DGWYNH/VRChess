@@ -10,11 +10,9 @@ Team members:
 - David Gwyn Higgins
 
 MVP Features List:
-- Board management
-- Modular piece design
+- Offline AI
 - Valid move check
-- Give all valid moves
-- Human readable debug
-
+- Game Menu
+- Park Environment
 
 Unity Engine Version: 2018.4.12f1
