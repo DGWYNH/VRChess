@@ -3,7 +3,7 @@ VR Chess repository for Senior Design Project
 
 Poster link: https://drive.google.com/file/d/1qFeF4p9EJ7H_Z8jTa_xYkfZHYplLyd-b/view?usp=sharing
 
-Video Presentation link: https://drive.google.com/file/d/19cyAyTWN6TlzYrl3mkezxJ9C6ja2oOf8/view?usp=sharing
+Video Presentation link: https://drive.google.com/file/d/1GZ462ENFwWbrfdvbqaWDo7DtNAMgEuyJ/view?usp=sharing
 
 Team members:
 - Michael Rock
