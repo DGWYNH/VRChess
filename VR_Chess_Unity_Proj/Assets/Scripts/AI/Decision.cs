@@ -4,7 +4,7 @@ using ChessGame.Engine.Misc;
 
 namespace ChessGame.AI
 {
-    public class Decision : IDecision
+    public class Decision : MonoBehaviour
     {
         private readonly Move m_move;
         private readonly double m_score; 

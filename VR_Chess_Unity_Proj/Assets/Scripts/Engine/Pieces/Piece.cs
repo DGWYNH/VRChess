@@ -7,7 +7,7 @@ using ChessGame.Engine.Game;
 
 namespace ChessGame.Engine.Pieces
 {
-    public class Piece : IPiece
+    public class Piece : MonoBehaviour
     {
 
 
@@ -29,6 +29,17 @@ namespace ChessGame.Engine.Pieces
             Console.Write("Score: {0}\n", m_score);
             Console.Write("Position: {0}\n", m_pos.AsText());
             Console.Write("Owner: {0}\n", Enum.GetName(typeof(Player), (int)m_owner));
+        }
+
+        public enum PieceType
+        {
+            NULL,
+            Pawn,
+            Knight,
+            Bishop,
+            Rook,
+            Queen,
+            King,
         }
 
         public PieceType Type()

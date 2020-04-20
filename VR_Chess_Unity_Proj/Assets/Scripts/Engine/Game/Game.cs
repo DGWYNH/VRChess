@@ -18,7 +18,7 @@ namespace ChessGame.Engine.Game
         public bool player2InCheck;
 
     }
-    class Game : IGame
+    class Game : MonoBehaviour
     {
         public static Board board;
         public static Player currentPlayer;
@@ -26,6 +26,9 @@ namespace ChessGame.Engine.Game
         public static List<Piece> capturedPieces;
 
         public static GameFlags gameflags;
+
+        public VRTK.VRTK_InteractGrab grabL;
+        public VRTK.VRTK_InteractGrab grabR;
 
         public void Init()
         {
@@ -47,11 +50,15 @@ namespace ChessGame.Engine.Game
             {
                 currentPlayer = Player.Player2;
                 otherPlayer = Player.Player1;
+                grabL.enabled = false;
+                grabR.enabled = false;
             }
             else
             {
                 currentPlayer = Player.Player1;
                 otherPlayer = Player.Player2;
+                grabL.enabled = true;
+                grabR.enabled = true;
             }
         }
 

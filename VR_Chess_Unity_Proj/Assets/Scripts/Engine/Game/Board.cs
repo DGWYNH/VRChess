@@ -19,9 +19,42 @@ using ChessGame.Engine.Game;
 namespace ChessGame.Engine.Game
 {
     
-    public class Board : IBoard
+    public class Board : MonoBehaviour
     {
         private readonly Piece[,] m_board;
+
+        public GameObject rw0;
+        public GameObject nw0;
+        public GameObject bw0;
+        public GameObject qw;
+        public GameObject kw;
+        public GameObject bw1;
+        public GameObject nw1;
+        public GameObject rw1;
+        public GameObject pw0;
+        public GameObject pw1;
+        public GameObject pw2;
+        public GameObject pw3;
+        public GameObject pw4;
+        public GameObject pw5;
+        public GameObject pw6;
+        public GameObject pw7;
+        public GameObject pb0;
+        public GameObject pb1;
+        public GameObject pb2;
+        public GameObject pb3;
+        public GameObject pb4;
+        public GameObject pb5;
+        public GameObject pb6;
+        public GameObject pb7;
+        public GameObject rb0;
+        public GameObject nb0;
+        public GameObject bb0;
+        public GameObject qb;
+        public GameObject kb;
+        public GameObject bb1;
+        public GameObject nb1;
+        public GameObject rb1;
 
         public Board()
         {
@@ -233,7 +266,7 @@ namespace ChessGame.Engine.Game
             {
                 for (int i = 0; i < 8; i++) {
                     Piece tempPiece = Game.board.At(new Position(i, n));
-                    if(tempPiece.Type() == PieceType.King) {
+                    if(tempPiece.Type() == Piece.PieceType.King) {
                         kingList.Add(tempPiece);
                     }   
                 }
@@ -249,7 +282,7 @@ namespace ChessGame.Engine.Game
                 // QueenCheck
                 foreach (var dir in Enum.GetValues(typeof(Direction))) {
                     if((Direction)dir != Direction.NULL) {
-                        if(kingPos.CheckDirPiece((Direction)dir).Type() == PieceType.Queen) {
+                        if(kingPos.CheckDirPiece((Direction)dir).Type() == Piece.PieceType.Queen) {
                             //TogglePlayerCheck(king.Owner());
                             return true;
                         }

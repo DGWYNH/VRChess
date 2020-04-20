@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 5648808}
   m_Layer: 0
   m_Name: KW
-  m_TagString: Piece
+  m_TagString: King
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 5648810}
@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 56289348}
   m_Layer: 0
   m_Name: PW1
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1843,7 +1843,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 56289350}
@@ -9577,7 +9577,7 @@ GameObject:
   - component: {fileID: 389613107}
   m_Layer: 0
   m_Name: PW0
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9666,7 +9666,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 389613109}
@@ -12880,7 +12880,7 @@ GameObject:
   - component: {fileID: 503543621}
   m_Layer: 0
   m_Name: PB4
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12982,7 +12982,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 503543623}
@@ -14093,13 +14093,19 @@ GameObject:
   m_Component:
   - component: {fileID: 537235658}
   - component: {fileID: 537235657}
+  - component: {fileID: 537235664}
+  - component: {fileID: 537235660}
+  - component: {fileID: 537235663}
+  - component: {fileID: 537235662}
+  - component: {fileID: 537235661}
+  - component: {fileID: 537235659}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &537235657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14126,6 +14132,112 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &537235659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537235656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6080f45a9c0fe4e8059132b0ec6b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &537235660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537235656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a544b4909f47d949ae3355ef20eec5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &537235661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537235656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79aa0d29884178428ef7a5007318dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &537235662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537235656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e8cb656eea85f48a63f4a5af99766f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabL: {fileID: 1408711855}
+  grabR: {fileID: 109582318}
+--- !u!114 &537235663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537235656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04773352cd0c8aa41a0dd3c401058aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rw0: {fileID: 1373786060}
+  nw0: {fileID: 922089874}
+  bw0: {fileID: 2128014581}
+  qw: {fileID: 1410719611}
+  kw: {fileID: 5648806}
+  bw1: {fileID: 1675117204}
+  nw1: {fileID: 1345262840}
+  rw1: {fileID: 1508816316}
+  pw0: {fileID: 389613105}
+  pw1: {fileID: 56289346}
+  pw2: {fileID: 2050864959}
+  pw3: {fileID: 846795436}
+  pw4: {fileID: 880746797}
+  pw5: {fileID: 1481667580}
+  pw6: {fileID: 819664620}
+  pw7: {fileID: 968328783}
+  pb0: {fileID: 991152120}
+  pb1: {fileID: 1482447760}
+  pb2: {fileID: 1684717446}
+  pb3: {fileID: 1121737472}
+  pb4: {fileID: 503543618}
+  pb5: {fileID: 2005682073}
+  pb6: {fileID: 1420468162}
+  pb7: {fileID: 1726392476}
+  rb0: {fileID: 853570884}
+  nb0: {fileID: 1596381903}
+  bb0: {fileID: 992013742}
+  qb: {fileID: 1491339556}
+  kb: {fileID: 1414376897}
+  bb1: {fileID: 1049132231}
+  nb1: {fileID: 2079625613}
+  rb1: {fileID: 742128381}
+--- !u!114 &537235664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537235656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce85eb1c987bfb34cbfb885270f7efba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &542194155
 GameObject:
   m_ObjectHideFlags: 0
@@ -18406,7 +18518,7 @@ GameObject:
   - component: {fileID: 742128384}
   m_Layer: 0
   m_Name: RB1
-  m_TagString: Piece
+  m_TagString: Rook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18508,7 +18620,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 742128386}
@@ -19829,7 +19941,7 @@ GameObject:
   - component: {fileID: 819664622}
   m_Layer: 0
   m_Name: PW6
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19918,7 +20030,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 819664624}
@@ -20592,7 +20704,7 @@ GameObject:
   - component: {fileID: 846795438}
   m_Layer: 0
   m_Name: PW3
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20681,7 +20793,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 846795440}
@@ -20756,7 +20868,7 @@ GameObject:
   - component: {fileID: 853570887}
   m_Layer: 0
   m_Name: RB0
-  m_TagString: Piece
+  m_TagString: Rook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20858,7 +20970,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 853570889}
@@ -21406,7 +21518,7 @@ GameObject:
   - component: {fileID: 880746799}
   m_Layer: 0
   m_Name: PW4
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21495,7 +21607,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 880746801}
@@ -22139,7 +22251,7 @@ GameObject:
   - component: {fileID: 922089876}
   m_Layer: 0
   m_Name: NW0
-  m_TagString: Piece
+  m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22228,7 +22340,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 922089878}
@@ -23049,7 +23161,7 @@ GameObject:
   - component: {fileID: 968328785}
   m_Layer: 0
   m_Name: PW7
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23138,7 +23250,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 968328787}
@@ -23717,7 +23829,7 @@ GameObject:
   - component: {fileID: 991152123}
   m_Layer: 0
   m_Name: PB0
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23819,7 +23931,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 991152125}
@@ -23849,7 +23961,7 @@ GameObject:
   - component: {fileID: 992013745}
   m_Layer: 0
   m_Name: BB0
-  m_TagString: Piece
+  m_TagString: Bishop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23951,7 +24063,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 992013747}
@@ -24804,7 +24916,7 @@ GameObject:
   - component: {fileID: 1049132234}
   m_Layer: 0
   m_Name: BB1
-  m_TagString: Piece
+  m_TagString: Bishop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24906,7 +25018,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1049132236}
@@ -26193,7 +26305,7 @@ GameObject:
   - component: {fileID: 1121737475}
   m_Layer: 0
   m_Name: PB3
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26295,7 +26407,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1121737477}
@@ -31363,7 +31475,7 @@ GameObject:
   - component: {fileID: 1345262842}
   m_Layer: 0
   m_Name: NW1
-  m_TagString: Piece
+  m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31452,7 +31564,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1345262844}
@@ -32362,7 +32474,7 @@ GameObject:
   - component: {fileID: 1373786062}
   m_Layer: 0
   m_Name: RW0
-  m_TagString: Piece
+  m_TagString: Rook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32451,7 +32563,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1373786064}
@@ -33663,7 +33775,7 @@ GameObject:
   - component: {fileID: 1410719613}
   m_Layer: 0
   m_Name: QW
-  m_TagString: Piece
+  m_TagString: Queen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33752,7 +33864,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1410719615}
@@ -33886,7 +33998,7 @@ GameObject:
   - component: {fileID: 1414376900}
   m_Layer: 0
   m_Name: KB
-  m_TagString: Piece
+  m_TagString: King
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33988,7 +34100,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1414376902}
@@ -34109,7 +34221,7 @@ GameObject:
   - component: {fileID: 1420468165}
   m_Layer: 0
   m_Name: PB6
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34211,7 +34323,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1420468167}
@@ -35523,7 +35635,7 @@ GameObject:
   - component: {fileID: 1481667582}
   m_Layer: 0
   m_Name: PW5
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35612,7 +35724,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1481667584}
@@ -35655,7 +35767,7 @@ GameObject:
   - component: {fileID: 1482447763}
   m_Layer: 0
   m_Name: PB1
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35757,7 +35869,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1482447765}
@@ -35927,7 +36039,7 @@ GameObject:
   - component: {fileID: 1491339559}
   m_Layer: 0
   m_Name: QB
-  m_TagString: Piece
+  m_TagString: Queen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36029,7 +36141,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1491339561}
@@ -36217,7 +36329,7 @@ GameObject:
   - component: {fileID: 1508816318}
   m_Layer: 0
   m_Name: RW1
-  m_TagString: Piece
+  m_TagString: Rook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36306,7 +36418,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1508816320}
@@ -38186,7 +38298,7 @@ GameObject:
   - component: {fileID: 1596381906}
   m_Layer: 0
   m_Name: NB0
-  m_TagString: Piece
+  m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38288,7 +38400,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1596381908}
@@ -40512,7 +40624,7 @@ GameObject:
   - component: {fileID: 1675117206}
   m_Layer: 0
   m_Name: BW1
-  m_TagString: Piece
+  m_TagString: Bishop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40601,7 +40713,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1675117208}
@@ -40856,7 +40968,7 @@ GameObject:
   - component: {fileID: 1684717449}
   m_Layer: 0
   m_Name: PB2
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40958,7 +41070,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1684717451}
@@ -41984,7 +42096,7 @@ GameObject:
   - component: {fileID: 1726392479}
   m_Layer: 0
   m_Name: PB7
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42086,7 +42198,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 1726392481}
@@ -46722,7 +46834,7 @@ GameObject:
   - component: {fileID: 2005682076}
   m_Layer: 0
   m_Name: PB5
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46824,7 +46936,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 2005682078}
@@ -48087,7 +48199,7 @@ GameObject:
   - component: {fileID: 2050864961}
   m_Layer: 0
   m_Name: PW2
-  m_TagString: Piece
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48176,7 +48288,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 2050864963}
@@ -49159,7 +49271,7 @@ GameObject:
   - component: {fileID: 2079625616}
   m_Layer: 0
   m_Name: NB1
-  m_TagString: Piece
+  m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49261,7 +49373,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 2079625618}
@@ -50415,7 +50527,7 @@ GameObject:
   - component: {fileID: 2128014583}
   m_Layer: 0
   m_Name: BW0
-  m_TagString: Piece
+  m_TagString: Bishop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50504,7 +50616,7 @@ MonoBehaviour:
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
-  validDrop: 2
+  validDrop: 1
   grabOverrideButton: 3
   allowedGrabControllers: 0
   grabAttachMechanicScript: {fileID: 2128014585}

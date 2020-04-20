@@ -60,19 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\Ai.cs" />
     <Compile Include="Assets\Scripts\AI\Decision.cs" />
-    <Compile Include="Assets\Scripts\AI\IDecision.cs" />
-    <Compile Include="Assets\Scripts\AI\Utils.cs" />
     <Compile Include="Assets\Scripts\Engine\Game\Board.cs" />
     <Compile Include="Assets\Scripts\Engine\Game\Game.cs" />
-    <Compile Include="Assets\Scripts\Engine\Game\IBoard.cs" />
-    <Compile Include="Assets\Scripts\Engine\Game\IGame.cs" />
-    <Compile Include="Assets\Scripts\Engine\Misc\IMove.cs" />
-    <Compile Include="Assets\Scripts\Engine\Misc\IPosition.cs" />
     <Compile Include="Assets\Scripts\Engine\Misc\Move.cs" />
     <Compile Include="Assets\Scripts\Engine\Misc\Position.cs" />
     <Compile Include="Assets\Scripts\Engine\Pieces\Bishop.cs" />
-    <Compile Include="Assets\Scripts\Engine\Pieces\IPiece.cs" />
     <Compile Include="Assets\Scripts\Engine\Pieces\King.cs" />
     <Compile Include="Assets\Scripts\Engine\Pieces\Knight.cs" />
     <Compile Include="Assets\Scripts\Engine\Pieces\Pawn.cs" />

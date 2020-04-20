@@ -4,7 +4,7 @@ using ChessGame.Engine.Misc;
 
 namespace ChessGame.Engine.Misc
 {
-    public class Move : IMove
+    public class Move : MonoBehaviour
     {
         private readonly Position m_fromPos;
         private readonly Position m_toPos;

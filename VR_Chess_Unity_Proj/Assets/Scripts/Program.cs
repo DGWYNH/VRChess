@@ -14,7 +14,7 @@ namespace ChessGame
     {
         static void Main()
         {
-            IGame game = new Game();
+            Game game = new Game();
             game.Init();
             Game.board.Print();
 

@@ -22,11 +22,15 @@ namespace ChessGame.Engine.Misc
     {
         readonly int m_x;
         readonly int m_y;
+        readonly int m_x_u;
+        readonly int m_y_u;
 
         public Position()
         {
             m_x = 0;
             m_y = 0;
+            m_x_u = 2 * m_x + 1;
+            m_y_u = 2 * m_y + 1;
         }
 
         public Position(int x, int y)
