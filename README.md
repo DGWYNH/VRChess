@@ -1,7 +1,7 @@
 # VRChess
 VR Chess repository for Senior Design Project
 
-Poster link: https://drive.google.com/file/d/1qFeF4p9EJ7H_Z8jTa_xYkfZHYplLyd-b/view?usp=sharing
+Poster is uploaded to github. (check Code Tab)
 
 Video Presentation link: https://youtu.be/QFOLvF9q_1U
 
